@@ -10,6 +10,7 @@ async function fetch_from_api(url, val) {
   return meal_list;
 }
 
+//This function will provide the details in form of a list and it's percistent
 async function showFavouriteMeals() {
   let arr = JSON.parse(localStorage.getItem("favMeals"));
   let url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
@@ -57,10 +58,8 @@ async function showFavouriteMeals() {
               `;
   }
   document.getElementById("favs").innerHTML = fav_body;
-
-  //console.log(arr.length);
 }
-
+// This function helps to add and remove item from the list.
 function addToandRemovefromFavs(id) {
   document.getElementById("main").innerHTML = "";
   let arr = JSON.parse(localStorage.getItem("favMeals"));
@@ -87,6 +86,7 @@ function addToandRemovefromFavs(id) {
   showFavouriteMeals();
 }
 
+//This function helps to populate the meal details
 async function showMealDetail(id) {
   let url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
   let body_html = "";
@@ -111,6 +111,7 @@ async function showMealDetail(id) {
   document.getElementById("main").innerHTML = body_html;
 }
 
+//On search for a particular meal this function helps to display the related meals according to the search.
 function displayMeals() {
   let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
   let ip = document.getElementById("search_id_ip").value;

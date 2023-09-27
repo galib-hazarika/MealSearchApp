@@ -9,6 +9,7 @@
 </head>
 <body>
   <!-- <h1>Find your Meal</h1> -->
+  <!--Nav Section for the site  which is responsive -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand">Meal</a>
@@ -19,8 +20,6 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="#" onclick="showFavouriteMeals()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Favourites</a>
-
-            
           </li>
         </ul>
         <form class="d-flex" role="search" onkeyup="displayMeals()">
@@ -28,25 +27,25 @@
       </div>
     </div>
   </nav>
+
+
   <!--full body section-->
   
-    <h3 class="text-md-center">Here Your Findings</h3>
-
-  
+   <!--- Main body section --> 
+  <h3 class="text-md-center">Here Your Findings</h3>
   <div id="main" class="d-flex justify-content-around container flex-wrap mt-5">
-    
   </div>
-  <!-- <span id="hover_in_text">Add to your favourite's list</span> -->
-  <!-- <div id="favs" class="d-flex justify-content-around container flex-wrap mt-5">Find Your Favourites here</div> -->
+  <!--*******-->
+  <!--Section for favourites -->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Favourites</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div id ="favs" class="offcanvas-body d-flex justify-content-center flex-wrap">
-      
     </div>
   </div>
+  <!---********--->
   <script src="meal_functions.js"></script>
 </body>
 </html>
