@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>Meal Finder</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+ <script src="https://kit.fontawesome.com/f5cbef85d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- <h1>Find your Meal</h1> -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">Meal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showFavouriteMeals()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Favourites</a>
+
+            
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onkeyup="displayMeals()">
+          <input id="search_id_ip" class="form-control me-2" type="search" placeholder="Search for meals"  aria-label="Search" >
+      </div>
+    </div>
+  </nav>
+  <!--full body section-->
+  
+    <h3 class="text-md-center">Here Your Findings</h3>
+
+  
+  <div id="main" class="d-flex justify-content-around container flex-wrap mt-5">
+    
+  </div>
+  <!-- <span id="hover_in_text">Add to your favourite's list</span> -->
+  <!-- <div id="favs" class="d-flex justify-content-around container flex-wrap mt-5">Find Your Favourites here</div> -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Favourites</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div id ="favs" class="offcanvas-body d-flex justify-content-center flex-wrap">
+      
+    </div>
+  </div>
+  <script src="meal_functions.js"></script>
+</body>
+</html>
+
+
