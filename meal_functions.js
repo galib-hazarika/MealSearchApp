@@ -16,7 +16,7 @@ async function showFavouriteMeals() {
   let url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
   let fav_body = "";
 
-  if (arr.length > 1) {
+  if (arr.length >0) {
     for (let i = 0; i < arr.length; i++) {
       await fetch_from_api(url, arr[i])
         .then((e) => {
